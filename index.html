@@ -1,0 +1,26 @@
+<html>
+    <script>
+        window.onload = function () {
+        const tag = document.getElementById('tag1');
+        var time = 100;
+        const getTime = () => {
+            time = time - 1;
+            if (time === -1) {
+                time = 0;
+                document.body.style.backgroundColor = 'red';
+            } 
+            tag.innerHTML = 'Goodbye Aliens: ship leaves in ' + time + ' secs';
+            }
+        setInterval(getTime, 100);
+        }
+    </script>
+<body>
+    <div>
+        <h1 id = "tag1">Hello Earthling</h1>
+    </div>
+</body>
+<!-- <script>
+    const tag = document.getElementById('tag1');
+    tag.innerHTML = 'Goodbye Aliens';
+</script> -->
+</html>
